@@ -1,4 +1,4 @@
-  package 字母频率统计;
+  package count;
   import java.io.BufferedReader;
   import java.io.File;
   import java.io.FileInputStream;
@@ -17,7 +17,7 @@
   import java.util.Map;
   import java.util.Map.Entry;
   public class count {
-      public static void wf(String args) throws  IOException {
+      public static void S1(String args) throws  IOException {
           try {
           //    DecimalFormat df = new DecimalFormat("######0.00");
               FileReader fr = new FileReader(args);
@@ -84,7 +84,7 @@
        
        
        
-	  public static void danci(String args) throws FileNotFoundException {
+	  public static void S2(String args) throws FileNotFoundException {
           File file=new File(args);                  //读取文件
          Scanner input=new Scanner(file);
           HashMap<String,Integer> hashMap=new HashMap<String,Integer>();
@@ -108,7 +108,7 @@
           }
       }
       
-      public static void danci2(String args) throws IOException {
+      public static void S3(String args) throws IOException {
           Scanner input=new Scanner(System.in);
           System.out.println("输入要统计的个数：");
           int n=input.nextInt();
@@ -162,13 +162,11 @@
      
      
      public static void menu() {
-         System.out.println("*****************************");
          System.out.println("欢迎访问本系统");
          System.out.println("1.统计字母出现频率");
          System.out.println("2.统计不重复单词情况");
          System.out.println("3.统计出现次数前n个单词");
          System.out.println("0.退出");
-         System.out.println("*****************************");
          System.out.println("请选择：");
      }
     public static  void main(String[] args) throws IOException   {
@@ -181,9 +179,9 @@
          a=shuru.nextInt();
          switch(a)
          {
-         case 1:wf(args[1]);break;
-         case 2:danci(args[1]);break;
-         case 3:danci2(args[1]);break;
+         case 1:S1(args[1]);break;
+         case 2:S2(args[1]);break;
+         case 3:S3(args[1]);break;
          case 0:a=0;break;
          default:a=0;break;
          }
